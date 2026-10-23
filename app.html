@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Better NYC — the app</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/glass.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/app.js" defer></script>
+</head>
+<body>
+<div class="app-wrap">
+  <div class="app-head">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="">better.NYC</a>
+    <button class="linklike" id="signout" style="display:none">Sign out</button>
+  </div>
+
+  <!-- not configured yet -->
+  <div class="panel glass" id="view-setup" style="display:none">
+    <span class="pill"><span class="dot"></span>Setup</span>
+    <h2 class="serif" style="margin-top:18px">Almost <i>there.</i></h2>
+    <p class="hint">This prototype needs its backend keys before it can sign you in. The setup takes about two minutes — see the README.</p>
+  </div>
+
+  <!-- auth -->
+  <div class="panel glass" id="view-auth" style="display:none">
+    <span class="pill"><span class="dot"></span>Better NYC · Project 001</span>
+    <h2 class="serif" id="auth-title" style="margin-top:18px">Welcome back.</h2>
+    <p class="hint" id="auth-hint">Sign in to see your benefits dashboard.</p>
+    <div class="form-err" id="form-err"></div>
+    <form id="auth-form">
+      <div class="field">
+        <label for="email">EMAIL</label>
+        <input id="email" type="email" autocomplete="email" placeholder="you@example.com">
+      </div>
+      <div class="field">
+        <label for="password">PASSWORD</label>
+        <input id="password" type="password" autocomplete="current-password" placeholder="••••••••">
+      </div>
+      <button class="btn-dark" id="auth-submit" type="submit"><span>Sign in</span><span class="arr">→</span></button>
+    </form>
+    <div class="switch"><span id="switch-q">New here?</span> <button id="switch-btn">Create one</button></div>
+  </div>
+
+  <!-- dashboard -->
+  <div id="view-app" style="display:none">
+    <div class="panel glass" id="dash" style="margin-top:8px"></div>
+  </div>
+</div>
+<script>
+  // show sign-out only when logged in (app.js toggles view; hook here)
+  new MutationObserver(function () {
+    var app = document.getElementById("view-app");
+    document.getElementById("signout").style.display =
+      app && app.style.display !== "none" ? "" : "none";
+  }).observe(document.getElementById("view-app"), { attributes: true, attributeFilter: ["style"] });
+</script>
+<footer>Design concept — not affiliated with NYC HRA.<br>Your data stays yours. Row-level security on every table.</footer>
+</body>
+</html>
