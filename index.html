@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Better NYC — HRA, rebuilt beautifully</title>
+<meta name="description" content="The city's help system, redesigned fast, simple, and actually helpful. Project 001: HRA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/glass.css">
+</head>
+<body>
+<div class="shell">
+  <nav class="nav">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="better.NYC logo">better.NYC</a>
+    <div class="nav-links">
+      <a class="nl" href="mta.html">Field notes</a>
+      <a class="btn-glass" href="app.html" style="padding:12px 22px;font-size:15px">Open the app</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <span class="pill"><span class="dot"></span>Better NYC — Project 001</span>
+    <h1 class="serif">HRA is <i>broken.</i><br>We rebuilt it <i>beautifully.</i></h1>
+    <p class="lead">Confirm your email in a browser. Bounce between the app and nyc.gov. Log in with a <b>username + password</b> like it's 2009. That's the system New Yorkers depend on — <b>so we redesigned it: calm, simple, human.</b></p>
+    <div class="cta-row">
+      <a class="btn-dark" href="app.html"><span>Try the prototype</span><span class="arr">→</span></a>
+      <a class="btn-glass" href="#how">How it works</a>
+    </div>
+    <div class="disclaimer">Design concept — not affiliated with NYC HRA.</div>
+
+    <div class="preview glass">
+      <div class="hello serif">Hello, <i>New Yorker.</i></div>
+      <div class="bencards">
+        <div class="bencard"><div class="t">SNAP</div><div class="amt">$292</div><div class="s">renews Nov 1</div></div>
+        <div class="bencard"><div class="t">CASH AID</div><div class="amt">$342</div><div class="s">active</div></div>
+      </div>
+      <a class="btn-dark" href="app.html"><span>Renew SNAP · 2 taps</span><span class="arr">→</span></a>
+    </div>
+  </header>
+
+  <section class="section" id="how">
+    <div class="kicker2">The problem</div>
+    <h2 class="serif">Getting help <i>shouldn't</i><br>be the hardest part.</h2>
+    <div class="duo">
+      <div class="col glass">
+        <h3>THE APP TODAY</h3>
+        <ul>
+          <li>Username + password login — in 2026</li>
+          <li>Confirm your email in a separate browser</li>
+          <li>Bounced between the app and nyc.gov</li>
+          <li>Status updates in caseworker code</li>
+        </ul>
+      </div>
+      <div class="col glass">
+        <h3>THE REBUILD</h3>
+        <ul>
+          <li><b>One-tap sign in.</b> That's the whole login flow.</li>
+          <li><b>Everything on one screen</b> — balances, renewals, status.</li>
+          <li><b>Renew SNAP in 2 taps.</b> Thirty seconds, done.</li>
+          <li><b>Plain-English tracker</b> — received, verified, approved.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="kicker2">The rebuild</div>
+    <h2 class="serif">Three things, <i>done right.</i></h2>
+    <p class="sub">No 40-page portal. No office visit to check a status. Just the three jobs people actually come for.</p>
+    <div class="grid3">
+      <div class="card3 glass"><div class="n">01</div><h3>Apply once</h3><p>One form. We fill in what the city already knows about you — you confirm, not retype.</p></div>
+      <div class="card3 glass"><div class="n">02</div><h3>Track everything</h3><p>Real-time status in plain English. You'll never have to "call the office" again.</p></div>
+      <div class="card3 glass"><div class="n">03</div><h3>Renew in 2 taps</h3><p>Reminders before anything expires. Renewals take thirty seconds, not thirty days.</p></div>
+    </div>
+  </section>
+
+  <section class="section center">
+    <span class="pill"><span class="dot"></span>Prototype v1 — live</span>
+    <h2 class="serif" style="margin-top:24px">This page is real.<br>The app behind it is <i>real.</i></h2>
+    <p class="sub">Sign up, get a seeded benefits dashboard, renew SNAP in 2 taps, watch the tracker move. Full-stack: frontend + database + auth.</p>
+    <div class="cta-row"><a class="btn-dark" href="app.html"><span>Open the prototype</span><span class="arr">→</span></a></div>
+  </section>
+</div>
+
+<footer>better.NYC — a design concept. Not affiliated with NYC HRA.<br>Built free-first: static frontend + Supabase.</footer>
+</body>
+</html>
